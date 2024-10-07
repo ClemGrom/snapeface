@@ -4,6 +4,14 @@
 <p>{{faceSnap.description}}</p>
 <p>Facesnap crée le {{faceSnap.createdAt}}</p>
 <p>Snaps : {{faceSnap.snaps}}</p>
+@if (faceSnap.location){
+    <p>Location : {{faceSnap.location}}</p>
+<!-- }@else if (faceSnap.location ==='Paris') {
+    <p>Il est à {{faceSnap.location}}</p> -->
+}@else {
+    <p>Location inconnue</p>
+}
+
 <button (click)="onLike()">{{snapButtonText}}</button>
 
 </div>
